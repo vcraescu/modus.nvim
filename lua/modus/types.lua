@@ -1,0 +1,124 @@
+--- @class theme.Config
+--- @field transparent boolean Use transparent background
+--- @field terminal_colors boolean Set terminal ANSI colors
+--- @field styles theme.Styles Style customization
+--- @field overrides fun(colors: theme.Colors): theme.Highlights Returns highlight overrides
+--- @field on_highlights fun(highlights: theme.Highlights, colors: theme.Colors) Modifies highlights in place
+
+--- @alias theme.Variant "operandi" | "operandi_tinted" | "vivendi" | "vivendi_tinted"
+
+--- Raw Modus colors and semantic mappings, keyed by their modus-themes.el names in snake_case
+--- @alias theme.Palette table<string, string>
+
+--- @class theme.TerminalColors
+--- @field black string
+--- @field bright_black string
+--- @field red string
+--- @field bright_red string
+--- @field green string
+--- @field bright_green string
+--- @field yellow string
+--- @field bright_yellow string
+--- @field blue string
+--- @field bright_blue string
+--- @field magenta string
+--- @field bright_magenta string
+--- @field cyan string
+--- @field bright_cyan string
+--- @field white string
+--- @field bright_white string
+
+--- @class theme.ChangeColors
+--- @field fg string Text foreground
+--- @field sign string Sign and marker foreground
+--- @field line_bg string Full-line background
+--- @field text_bg string Inline text background
+
+--- @class theme.Changes
+--- @field add theme.ChangeColors
+--- @field change theme.ChangeColors
+--- @field delete theme.ChangeColors
+
+--- @class theme.Colors
+--- @field bg string Editor background
+--- @field bg_dim string Dim surface background
+--- @field bg_active string Emphasized surface background
+--- @field bg_inactive string Subtle surface background
+--- @field bg_popup string Completion menu background
+--- @field fg string Default text
+--- @field fg_dim string Dim text
+--- @field fg_alt string Alternative text
+--- @field border string
+--- @field cursor string
+--- @field cursorline string
+--- @field visual string
+--- @field visual_fg string
+--- @field selection string Selected completion item background
+--- @field gutter string Line number, sign, and fold column background
+--- @field line_number string
+--- @field line_number_current string
+--- @field line_number_current_bg string
+--- @field statusline string
+--- @field statusline_bg string
+--- @field statusline_nc string
+--- @field statusline_nc_bg string
+--- @field tabline_bg string
+--- @field tabline_current_bg string
+--- @field tabline_other_bg string
+--- @field paren_match string
+--- @field paren_match_bg string
+--- @field directory string
+--- @field prompt string
+--- @field keybind string
+--- @field whitespace string
+--- @field whitespace_error_bg string
+--- @field ghost_text string
+--- @field markup_code string Inline code foreground
+--- @field markup_code_bg string Code block background
+--- @field markup_table string
+--- @field headings string[] Heading foregrounds, levels 1 to 6
+--- @field keyword string
+--- @field builtin string
+--- @field string string
+--- @field docstring string
+--- @field docmarkup string
+--- @field number string
+--- @field constant string
+--- @field func string
+--- @field func_call string
+--- @field variable string
+--- @field property string
+--- @field type string
+--- @field comment string
+--- @field preprocessor string
+--- @field operator string
+--- @field punctuation string
+--- @field bracket string
+--- @field delimiter string
+--- @field regex_backslash string
+--- @field regex_construct string
+--- @field error string
+--- @field warning string
+--- @field info string
+--- @field hint string
+--- @field ok string
+--- @field underline_error string
+--- @field underline_warning string
+--- @field underline_note string
+--- @field search_current string
+--- @field search_current_bg string
+--- @field search_lazy string
+--- @field search_lazy_bg string
+--- @field search_replace string
+--- @field search_replace_bg string
+--- @field match string Fuzzy and completion match foreground
+--- @field changes theme.Changes Shared Git and diff colors
+--- @field todo string
+--- @field link string
+--- @field link_symbolic string Symbolic link foreground
+--- @field none string Transparency sentinel
+--- @field terminal theme.TerminalColors
+
+--- @alias theme.Highlights table<string, vim.api.keyset.highlight>
+--- @alias theme.StyleType "comments" | "keywords" | "functions" | "variables"
+--- @alias theme.Styles table<theme.StyleType, vim.api.keyset.highlight>

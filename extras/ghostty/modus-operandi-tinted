@@ -1,0 +1,43 @@
+background = #fbf7f0
+foreground = #000000
+
+cursor-color = #d00000
+cursor-text = #fbf7f0
+
+selection-background = #c2bcb5
+selection-foreground = #000000
+
+# ANSI Colors (0-15)
+# Black
+palette = 0=#000000
+palette = 8=#595959
+
+# Red
+palette = 1=#a60000
+palette = 9=#972500
+
+# Green
+palette = 2=#006300
+palette = 10=#00603f
+
+# Yellow
+palette = 3=#6d5000
+palette = 11=#894000
+
+# Blue
+palette = 4=#0031a9
+palette = 12=#3546c2
+
+# Magenta
+palette = 5=#721045
+palette = 13=#531ab6
+
+# Cyan
+palette = 6=#00598b
+palette = 14=#005f5f
+
+# White
+palette = 7=#a6a6a6
+palette = 15=#ffffff
+
+split-divider-color = #9f9690

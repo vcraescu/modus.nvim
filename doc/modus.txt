@@ -1,0 +1,99 @@
+*modus.txt*  A port of the Modus themes for Neovim
+
+==============================================================================
+CONTENTS                                                      *modus-contents*
+
+    1. Introduction ........................................ |modus-intro|
+    2. Usage ............................................... |modus-usage|
+    3. Configuration ....................................... |modus-configuration|
+    4. Color Palette ....................................... |modus-colors|
+    5. License ............................................. |modus-license|
+
+==============================================================================
+1. INTRODUCTION                                                  *modus-intro*
+
+modus.nvim is a port of the Modus themes by Protesilaos Stavrou. All colors
+and semantic mappings come from modus-themes.el.
+
+Colorschemes:
+  • modus-operandi           Light
+  • modus-operandi-tinted    Light, warm tint
+  • modus-vivendi            Dark
+  • modus-vivendi-tinted     Dark, night sky tint
+
+==============================================================================
+2. USAGE                                                         *modus-usage*
+
+>lua
+    vim.cmd("colorscheme modus-vivendi")
+<
+
+                                                              *modus.load()*
+modus.load({variant})
+    Load a variant. {variant} is one of "operandi", "operandi_tinted",
+    "vivendi", or "vivendi_tinted".
+
+                                                    *modus.get_fzf_colors()*
+modus.get_fzf_colors({variant})
+    Return a color string for the fzf "--color" option.
+
+==============================================================================
+3. CONFIGURATION                                         *modus-configuration*
+
+                                                             *modus.setup()*
+modus.setup({opts})
+    Configure the theme. Call it before you load a colorscheme.
+
+    Parameters: ~
+        {opts} (table|nil) Configuration table with these keys:
+
+        • transparent (boolean)
+            Use a transparent background (default: false)
+
+        • terminal_colors (boolean)
+            Set the terminal colors (default: true)
+
+        • styles (table)
+            Styles for comments, keywords, functions, and variables.
+            Each style can set italic, bold, underline, undercurl, and
+            strikethrough.
+
+        • overrides (function)
+            Signature: function(colors) -> table
+            Returns highlight groups to merge.
+
+        • on_highlights (function)
+            Signature: function(highlights, colors) -> nil
+            Modifies the highlights table in place.
+
+Example: >lua
+    require("modus").setup({
+      styles = {
+        comments = { italic = true },
+      },
+      overrides = function(colors)
+        return {
+          Function = { fg = colors.func, bold = true },
+        }
+      end,
+    })
+    vim.cmd("colorscheme modus-operandi")
+<
+
+==============================================================================
+4. COLOR PALETTE                                                *modus-colors*
+
+The raw palettes are in lua/modus/palettes/. Each name is the modus-themes.el
+name in snake case. For example, "bg-main" becomes "bg_main".
+
+The semantic colors are in lua/modus/colors.lua. The callbacks receive these
+colors. Get them for a variant with: >lua
+    local colors = require("modus.colors").get("vivendi")
+<
+
+==============================================================================
+5. LICENSE                                                     *modus-license*
+
+MIT License. The palettes come from modus-themes by Protesilaos Stavrou.
+
+ vim:tw=78:ts=8:ft=help:norl:
