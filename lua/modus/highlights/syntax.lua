@@ -40,7 +40,7 @@ function M.get(c, config)
 		String = { fg = c.string },
 		Structure = { link = "Keyword" },
 		Tag = { fg = c.func },
-		Todo = { fg = c.todo },
+		Todo = { fg = c.prominent_error, bg = c.prominent_error_bg },
 		Type = { fg = c.type, nocombine = true },
 		Typedef = { link = "Type" },
 		Underlined = { fg = c.link, underline = true },

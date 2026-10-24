@@ -117,6 +117,12 @@
 --- @field underline_error string
 --- @field underline_warning string
 --- @field underline_note string
+--- @field prominent_error string Error label foreground
+--- @field prominent_error_bg string Error label background
+--- @field prominent_warning string Warning label foreground
+--- @field prominent_warning_bg string Warning label background
+--- @field prominent_note string Note label foreground
+--- @field prominent_note_bg string Note label background
 --- @field search_current string
 --- @field search_current_bg string
 --- @field search_lazy string
@@ -125,7 +131,6 @@
 --- @field search_replace_bg string
 --- @field match string Fuzzy and completion match foreground
 --- @field changes modus.Changes Shared Git and diff colors
---- @field todo string
 --- @field link string
 --- @field link_symbolic string Symbolic link foreground
 --- @field none string Transparency sentinel

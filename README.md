@@ -114,7 +114,8 @@ Use the semantic names when you define highlights:
 - **Code**: `keyword`, `builtin`, `string`, `docstring`, `constant`, `func`, `func_call`, `type`, `property`, `comment`,
   `preprocessor`
 - **UI**: `cursorline`, `visual`, `selection`, `gutter`, `line_number`, `border`, `directory`, `prompt`
-- **Diagnostics**: `error`, `warning`, `info`, `hint`, `ok`
+- **Diagnostics**: `error`, `warning`, `info`, `hint`, `ok`, and `prominent_error`, `prominent_warning`,
+  `prominent_note`, each with a `_bg` pair
 - **Changes**: `changes.add`, `changes.change`, and `changes.delete`, each with `fg`, `sign`, `fringe`, `line_bg`, and
   `text_bg`
 

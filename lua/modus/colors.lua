@@ -89,6 +89,12 @@ function M.get(variant)
 		underline_error = p.underline_err,
 		underline_warning = p.underline_warning,
 		underline_note = p.underline_note,
+		prominent_error = p.fg_prominent_err,
+		prominent_error_bg = p.bg_prominent_err,
+		prominent_warning = p.fg_prominent_warning,
+		prominent_warning_bg = p.bg_prominent_warning,
+		prominent_note = p.fg_prominent_note,
+		prominent_note_bg = p.bg_prominent_note,
 
 		-- Search
 		search_current = p.fg_search_current,
@@ -125,7 +131,6 @@ function M.get(variant)
 		},
 
 		-- Special elements
-		todo = p.prose_todo,
 		link = p.fg_link,
 		link_symbolic = p.fg_link_symbolic,
 		none = "NONE",
