@@ -1,7 +1,7 @@
 local M = {}
 
---- @param c theme.Colors Color palette
---- @return theme.Highlights
+--- @param c modus.Colors Color palette
+--- @return modus.Highlights
 function M.get(c)
 	local blink_cmp = require("modus.highlights.integrations.blink-cmp")
 	local copilot = require("modus.highlights.integrations.copilot")

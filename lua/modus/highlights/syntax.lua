@@ -1,9 +1,9 @@
 local M = {}
 
 --- Get syntax highlight groups
---- @param c theme.Colors Color palette
---- @param config theme.Config User configuration
---- @return theme.Highlights
+--- @param c modus.Colors Color palette
+--- @param config modus.Config User configuration
+--- @return modus.Highlights
 function M.get(c, config)
 	local util = require("modus.util")
 	local styles = util.get_styles(config)

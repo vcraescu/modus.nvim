@@ -1,8 +1,8 @@
 local M = {}
 
 --- Diagnostics and LSP highlights
---- @param c theme.Colors Color palette
---- @return theme.Highlights
+--- @param c modus.Colors Color palette
+--- @return modus.Highlights
 function M.get(c)
 	return {
 		DiagnosticError = { fg = c.error },

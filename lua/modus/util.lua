@@ -3,7 +3,7 @@ local M = {
 }
 
 --- Load highlight groups
----@param groups theme.Highlights Table of highlight groups and their options
+---@param groups modus.Highlights Table of highlight groups and their options
 function M.load_highlights(groups)
 	for group, opts in pairs(groups) do
 		vim.api.nvim_set_hl(0, group, opts)
@@ -11,9 +11,9 @@ function M.load_highlights(groups)
 end
 
 --- Apply configuration overrides to colors
----@param colors theme.Colors Base color palette
----@param config theme.Config User configuration
----@return theme.Colors
+---@param colors modus.Colors Base color palette
+---@param config modus.Config User configuration
+---@return modus.Colors
 function M.apply_overrides(colors, config)
 	colors = vim.deepcopy(colors)
 	if config.transparent then
@@ -25,9 +25,9 @@ function M.apply_overrides(colors, config)
 end
 
 -- Get style options from config
---- @param opts theme.Config User configuration
---- @param style_type theme.StyleType
---- @return fun(opts: vim.api.keyset.highlight): vim.api.keyset.highlight
+--- @param opts modus.Config User configuration
+--- @param style_type modus.StyleType
+--- @return modus.StyleFn
 function M.get_style(opts, style_type)
 	opts = opts or {}
 
@@ -69,8 +69,8 @@ function M.get_style(opts, style_type)
 	end
 end
 
---- @param opts theme.Config User configuration
---- @return theme.Styles
+--- @param opts modus.Config User configuration
+--- @return modus.StyleFns
 function M.get_styles(opts)
 	local cache_key = vim.inspect(opts.styles or {})
 

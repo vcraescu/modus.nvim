@@ -1,8 +1,8 @@
 local M = {}
 
 --- Load and combine highlights from all modules
---- @param colors theme.Colors Color palette
---- @param config theme.Config User configuration
+--- @param colors modus.Colors Color palette
+--- @param config modus.Config User configuration
 --- @return table Combined highlight groups
 function M.setup(colors, config)
 	-- Load all highlight modules

@@ -1,16 +1,27 @@
---- @class theme.Config
+--- @meta
+
+--- Resolved configuration
+--- @class modus.Config
 --- @field transparent boolean Use transparent background
 --- @field terminal_colors boolean Set terminal ANSI colors
---- @field styles theme.Styles Style customization
---- @field overrides fun(colors: theme.Colors): theme.Highlights Returns highlight overrides
---- @field on_highlights fun(highlights: theme.Highlights, colors: theme.Colors) Modifies highlights in place
+--- @field styles modus.Styles Style customization
+--- @field overrides fun(colors: modus.Colors): modus.Highlights Returns highlight overrides
+--- @field on_highlights fun(highlights: modus.Highlights, colors: modus.Colors) Modifies highlights in place
 
---- @alias theme.Variant "operandi" | "operandi_tinted" | "vivendi" | "vivendi_tinted"
+--- User options for `setup()`
+--- @class modus.Opts
+--- @field transparent? boolean Use transparent background
+--- @field terminal_colors? boolean Set terminal ANSI colors
+--- @field styles? modus.Styles Style customization
+--- @field overrides? fun(colors: modus.Colors): modus.Highlights Returns highlight overrides
+--- @field on_highlights? fun(highlights: modus.Highlights, colors: modus.Colors) Modifies highlights in place
+
+--- @alias modus.Variant "operandi" | "operandi_tinted" | "vivendi" | "vivendi_tinted"
 
 --- Raw Modus colors and semantic mappings, keyed by their modus-themes.el names in snake_case
---- @alias theme.Palette table<string, string>
+--- @alias modus.Palette table<string, string>
 
---- @class theme.TerminalColors
+--- @class modus.TerminalColors
 --- @field black string
 --- @field bright_black string
 --- @field red string
@@ -28,18 +39,19 @@
 --- @field white string
 --- @field bright_white string
 
---- @class theme.ChangeColors
+--- @class modus.ChangeColors
 --- @field fg string Text foreground
---- @field sign string Sign and marker foreground
+--- @field sign string Marker foreground
+--- @field fringe string Sign column indicator
 --- @field line_bg string Full-line background
 --- @field text_bg string Inline text background
 
---- @class theme.Changes
---- @field add theme.ChangeColors
---- @field change theme.ChangeColors
---- @field delete theme.ChangeColors
+--- @class modus.Changes
+--- @field add modus.ChangeColors
+--- @field change modus.ChangeColors
+--- @field delete modus.ChangeColors
 
---- @class theme.Colors
+--- @class modus.Colors
 --- @field bg string Editor background
 --- @field bg_dim string Dim surface background
 --- @field bg_active string Emphasized surface background
@@ -112,13 +124,15 @@
 --- @field search_replace string
 --- @field search_replace_bg string
 --- @field match string Fuzzy and completion match foreground
---- @field changes theme.Changes Shared Git and diff colors
+--- @field changes modus.Changes Shared Git and diff colors
 --- @field todo string
 --- @field link string
 --- @field link_symbolic string Symbolic link foreground
 --- @field none string Transparency sentinel
---- @field terminal theme.TerminalColors
+--- @field terminal modus.TerminalColors
 
---- @alias theme.Highlights table<string, vim.api.keyset.highlight>
---- @alias theme.StyleType "comments" | "keywords" | "functions" | "variables"
---- @alias theme.Styles table<theme.StyleType, vim.api.keyset.highlight>
+--- @alias modus.Highlights table<string, vim.api.keyset.highlight>
+--- @alias modus.StyleType "comments" | "keywords" | "functions" | "variables"
+--- @alias modus.Styles table<modus.StyleType, vim.api.keyset.highlight>
+--- @alias modus.StyleFn fun(hl: vim.api.keyset.highlight): vim.api.keyset.highlight
+--- @alias modus.StyleFns table<modus.StyleType, modus.StyleFn>

@@ -1,9 +1,9 @@
 local M = {}
 
 --- Get Treesitter highlights
---- @param c theme.Colors Color palette
---- @param config theme.Config Theme configuration
---- @return theme.Highlights
+--- @param c modus.Colors Color palette
+--- @param config modus.Config Theme configuration
+--- @return modus.Highlights
 function M.get(c, config)
 	local util = require("modus.util")
 	local styles = util.get_styles(config)
@@ -19,11 +19,11 @@ function M.get(c, config)
 		["@comment.attribute"] = styles.comments({ fg = c.docmarkup }),
 		["@comment.documentation"] = { link = "SpecialComment" },
 		["@comment.error"] = { link = "Todo" },
-		["@comment.hint"] = { link = "Todo" },
-		["@comment.info"] = { link = "Todo" },
-		["@comment.note"] = { link = "Todo" },
+		["@comment.hint"] = { fg = c.info },
+		["@comment.info"] = { fg = c.info },
+		["@comment.note"] = { fg = c.warning },
 		["@comment.todo"] = { link = "Todo" },
-		["@comment.warning"] = { link = "Todo" },
+		["@comment.warning"] = { fg = c.warning },
 		["@constant"] = { link = "Constant" },
 		["@constant.builtin"] = { link = "Constant" },
 		["@constant.macro"] = { link = "Macro" },

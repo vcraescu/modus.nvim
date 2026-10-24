@@ -1,8 +1,8 @@
 local M = {}
 
 --- Get FzfLua highlight groups
---- @param c theme.Colors Color palette
---- @return theme.Highlights
+--- @param c modus.Colors Color palette
+--- @return modus.Highlights
 function M.get(c)
 	return {
 		FzfLuaNormal = { link = "NormalFloat" },

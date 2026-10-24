@@ -1,4 +1,4 @@
---- @type theme.Palette
+--- @type modus.Palette
 local M = {}
 
 -- Values from `modus-themes-operandi-palette` in modus-themes.el.

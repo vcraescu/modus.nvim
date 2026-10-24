@@ -115,7 +115,8 @@ Use the semantic names when you define highlights:
   `preprocessor`
 - **UI**: `cursorline`, `visual`, `selection`, `gutter`, `line_number`, `border`, `directory`, `prompt`
 - **Diagnostics**: `error`, `warning`, `info`, `hint`, `ok`
-- **Changes**: `changes.add`, `changes.change`, and `changes.delete`, each with `fg`, `sign`, `line_bg`, and `text_bg`
+- **Changes**: `changes.add`, `changes.change`, and `changes.delete`, each with `fg`, `sign`, `fringe`, `line_bg`, and
+  `text_bg`
 
 To use a raw color in a callback, load the palette:
 

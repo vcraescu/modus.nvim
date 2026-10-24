@@ -1,8 +1,8 @@
 local M = {}
 
 --- Get BlinkCmp highlight groups
---- @param c theme.Colors palette
---- @return theme.Highlights
+--- @param c modus.Colors palette
+--- @return modus.Highlights
 function M.get(c)
 	return {
 		BlinkCmpMenu = { link = "Pmenu" },

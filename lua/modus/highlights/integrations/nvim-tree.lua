@@ -1,8 +1,8 @@
 local M = {}
 
 --- Get NvimTree highlight groups
---- @param c theme.Colors Color palette
---- @return theme.Highlights
+--- @param c modus.Colors Color palette
+--- @return modus.Highlights
 function M.get(c)
 	return {
 		NvimTreeNormal = { fg = c.fg, bg = c.none },

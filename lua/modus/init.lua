@@ -1,7 +1,7 @@
 local M = {}
 
 --- Load the colorscheme
---- @param variant theme.Variant
+--- @param variant modus.Variant
 --- @return nil
 function M.load(variant)
 	-- Reset highlights
@@ -53,7 +53,7 @@ function M.load(variant)
 end
 
 --- Setup the colorscheme with custom configuration
----@param opts theme.Config|nil User configuration options
+---@param opts? modus.Opts User configuration
 ---@return nil
 function M.setup(opts)
 	opts = opts or {}
@@ -63,7 +63,7 @@ function M.setup(opts)
 end
 
 --- Get fzf color string for use with fzf-lua or fzf
---- @param variant theme.Variant
+--- @param variant modus.Variant
 --- @return string FZF color configuration string
 function M.get_fzf_colors(variant)
 	local colors = require("modus.colors").get(variant)

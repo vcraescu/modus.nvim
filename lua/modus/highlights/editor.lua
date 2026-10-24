@@ -1,13 +1,13 @@
 local M = {}
 
 --- Get editor UI highlight groups
---- @param c theme.Colors Color palette
---- @return theme.Highlights
+--- @param c modus.Colors Color palette
+--- @return modus.Highlights
 function M.get(c)
 	return {
 		Added = { fg = c.changes.add.fg },
 		Changed = { fg = c.changes.change.fg },
-		ColorColumn = { bg = c.bg_dim },
+		ColorColumn = { bg = c.bg_active },
 		Conceal = { fg = c.fg_dim },
 		CurSearch = { fg = c.search_current, bg = c.search_current_bg },
 		Cursor = { fg = c.bg, bg = c.cursor },
@@ -47,7 +47,7 @@ function M.get(c)
 		PmenuMatchSel = { fg = c.match, bg = c.selection },
 		PmenuSbar = { bg = c.bg_inactive },
 		PmenuSel = { bg = c.selection },
-		PmenuThumb = { bg = c.bg_active },
+		PmenuThumb = { bg = c.fg_dim },
 		Question = { fg = c.prompt },
 		QuickFixLine = { bg = c.cursorline },
 		Removed = { fg = c.changes.delete.fg },

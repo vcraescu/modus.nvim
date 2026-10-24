@@ -1,7 +1,7 @@
 local M = {}
 
 --- Get LSP highlight groups
---- @return theme.Highlights
+--- @return modus.Highlights
 function M.get()
 	return {
 		["@lsp.mod.documentation"] = { link = "@comment.documentation" },
