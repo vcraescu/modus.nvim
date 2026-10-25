@@ -110,14 +110,14 @@ Colors are in two layers:
 Use the semantic names when you define highlights:
 
 - **Backgrounds**: `bg`, `bg_dim`, `bg_active`, `bg_inactive`, `bg_popup`
-- **Foregrounds**: `fg`, `fg_dim`, `fg_alt`
+- **Foregrounds**: `fg`, `fg_dim`
 - **Code**: `keyword`, `builtin`, `string`, `docstring`, `constant`, `func`, `func_call`, `type`, `property`, `comment`,
   `preprocessor`
 - **UI**: `cursorline`, `visual`, `selection`, `gutter`, `line_number`, `border`, `directory`, `prompt`
 - **Diagnostics**: `error`, `warning`, `info`, `hint`, `ok`, and `prominent_error`, `prominent_warning`,
   `prominent_note`, each with a `_bg` pair
-- **Changes**: `changes.add`, `changes.change`, and `changes.delete`, each with `fg`, `sign`, `fringe`, `line_bg`, and
-  `text_bg`
+- **Changes**: `changes.add`, `changes.change`, and `changes.delete`, each with `fg`, `fringe`, `line_bg`, and
+  `text_bg`. `changes.add` also has `sign`.
 
 To use a raw color in a callback, load the palette:
 

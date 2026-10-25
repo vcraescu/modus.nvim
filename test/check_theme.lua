@@ -106,13 +106,13 @@ theme.setup({
 		return { Function = { fg = c.keyword, bold = true } }
 	end,
 	on_highlights = function(highlights, c)
-		highlights.GitSignsAdd = { fg = c.changes.change.sign }
+		highlights.GitSignsAdd = { fg = c.changes.change.fg }
 	end,
 })
 theme.load("vivendi")
 assert_highlight("Function", "fg", vivendi.keyword)
 assert(vim.api.nvim_get_hl(0, { name = "Function", link = false }).bold)
-assert_highlight("GitSignsAdd", "fg", vivendi.changes.change.sign)
+assert_highlight("GitSignsAdd", "fg", vivendi.changes.change.fg)
 
 theme.setup({ styles = { functions = { italic = true }, comments = { italic = true } } })
 theme.load("vivendi")

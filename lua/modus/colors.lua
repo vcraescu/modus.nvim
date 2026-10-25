@@ -26,8 +26,6 @@ function M.get(variant)
 		fg = p.fg_main,
 		--- Dim text
 		fg_dim = p.fg_dim,
-		--- Alternative text
-		fg_alt = p.fg_alt,
 
 		-- Editor
 		border = p.border,
@@ -55,13 +53,11 @@ function M.get(variant)
 		prompt = p.fg_prompt,
 		keybind = p.keybind,
 		whitespace = p.fg_space,
-		whitespace_error_bg = p.bg_space_err,
 		ghost_text = p.fg_dim,
 		--- Inline code foreground
 		markup_code = p.fg_prose_code,
 		--- Code block background
 		markup_code_bg = p.bg_prose_block_contents,
-		markup_table = p.prose_table,
 		--- Heading foregrounds, levels 1 to 6
 		headings = {
 			p.fg_heading_1,
@@ -143,8 +139,6 @@ function M.get(variant)
 			change = {
 				--- Text foreground
 				fg = p.fg_changed,
-				--- Marker foreground
-				sign = p.fg_changed_intense,
 				--- Sign column indicator
 				fringe = p.bg_changed_fringe,
 				--- Full-line background
@@ -155,8 +149,6 @@ function M.get(variant)
 			delete = {
 				--- Text foreground
 				fg = p.fg_removed,
-				--- Marker foreground
-				sign = p.fg_removed_intense,
 				--- Sign column indicator
 				fringe = p.bg_removed_fringe,
 				--- Full-line background
