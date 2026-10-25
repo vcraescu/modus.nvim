@@ -2,7 +2,7 @@ local M = {}
 
 --- Default configuration
 --- Users can override these settings by passing a table to the setup function
---- @type modus.Config
+--- @class modus.Config
 local defaults = {
 	-- Transparent background
 	transparent = false,
@@ -11,6 +11,7 @@ local defaults = {
 	terminal_colors = true,
 
 	-- Style customization for different syntax groups
+	--- @type modus.Styles
 	styles = {
 		comments = {},
 		keywords = {},
@@ -19,11 +20,13 @@ local defaults = {
 	},
 
 	-- Function that receives colors table and returns highlight overrides
+	--- @type fun(colors: modus.Colors): modus.Highlights
 	overrides = function()
 		return {}
 	end,
 
 	-- Function that receives the final highlights table and can modify it directly
+	--- @type fun(highlights: modus.Highlights, colors: modus.Colors)
 	on_highlights = function() end,
 }
 
