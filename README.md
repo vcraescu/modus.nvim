@@ -14,6 +14,24 @@ A port of the [Modus themes](https://github.com/protesilaos/modus-themes) by Pro
 | `modus-vivendi`         | Dark       | `modus-themes-vivendi-palette`         |
 | `modus-vivendi-tinted`  | Dark       | `modus-themes-vivendi-tinted-palette`  |
 
+## Screenshots
+
+### modus-operandi
+
+![modus-operandi](screenshots/modus-operandi.png)
+
+### modus-operandi-tinted
+
+![modus-operandi-tinted](screenshots/modus-operandi-tinted.png)
+
+### modus-vivendi
+
+![modus-vivendi](screenshots/modus-vivendi.png)
+
+### modus-vivendi-tinted
+
+![modus-vivendi-tinted](screenshots/modus-vivendi-tinted.png)
+
 ## Features
 
 - **Upstream palettes**: All colors come from `modus-themes.el`.
