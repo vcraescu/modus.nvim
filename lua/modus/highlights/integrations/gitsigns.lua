@@ -5,9 +5,9 @@ local M = {}
 --- @return modus.Highlights
 function M.get(c)
 	return {
-		GitSignsAdd = { fg = c.changes.add.fringe },
-		GitSignsChange = { fg = c.changes.change.fringe },
-		GitSignsDelete = { fg = c.changes.delete.fringe },
+		GitSignsAdd = { fg = c.changes.add.sign, bg = c.changes.add.line_bg },
+		GitSignsChange = { fg = c.changes.change.sign, bg = c.changes.change.line_bg },
+		GitSignsDelete = { fg = c.changes.delete.sign, bg = c.changes.delete.line_bg },
 		GitSignsTopdelete = { link = "GitSignsDelete" },
 		GitSignsChangedelete = { link = "GitSignsChange" },
 		GitSignsAddLn = { bg = c.changes.add.line_bg },

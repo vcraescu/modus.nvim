@@ -129,8 +129,6 @@ function M.get(variant)
 				fg = p.fg_added,
 				--- Marker foreground
 				sign = p.fg_added_intense,
-				--- Sign column indicator
-				fringe = p.bg_added_fringe,
 				--- Full-line background
 				line_bg = p.bg_added,
 				--- Inline text background
@@ -139,8 +137,8 @@ function M.get(variant)
 			change = {
 				--- Text foreground
 				fg = p.fg_changed,
-				--- Sign column indicator
-				fringe = p.bg_changed_fringe,
+				--- Marker foreground
+				sign = p.fg_changed_intense,
 				--- Full-line background
 				line_bg = p.bg_changed,
 				--- Inline text background
@@ -149,8 +147,8 @@ function M.get(variant)
 			delete = {
 				--- Text foreground
 				fg = p.fg_removed,
-				--- Sign column indicator
-				fringe = p.bg_removed_fringe,
+				--- Marker foreground
+				sign = p.fg_removed_intense,
 				--- Full-line background
 				line_bg = p.bg_removed,
 				--- Inline text background
